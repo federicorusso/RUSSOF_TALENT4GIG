@@ -142,7 +142,7 @@ public class T4GFrame {
 				}
 				
 				List<ProcessInfo> list = new ArrayList<ProcessInfo>();
-				
+				// For testing purposes
 				list.add(new ProcessInfo(1, "Process 1", "First process", "WEEKLY", new Date(1592406705000L), new Date(1592409045000L)));
 				list.get(0).setProcessState(ProcessStateEnum.COMPLETED);
 				list.add(new ProcessInfo(2, "Process 2", "Second process", "MONTHLY", new Date(1592406705000L), new Date(1592409045000L)));
