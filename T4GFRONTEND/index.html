@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- TODO: Setup script, read values from forms, populate table with set returned from backend -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Process Monitor</title>
+	<!-- Missing css file since inline css was used -->
+    <script src="script.js"></script>
+	<style>
+
+html {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #70bg32;
+    background-repeat:no-repeat;
+    background: -webkit-linear-gradient( to left top, blue, lightblue);
+    background: -moz-linear-gradient( to left top, blue, lightblue);
+    background: -ms-linear-gradient( to left top, blue, lightblue);
+    background: -o-linear-gradient( to left top, blue, lightblue);
+    background: linear-gradient( to left top, blue, lightblue);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  
+  background: -webkit-linear-gradient( to top, white, lightblue);
+    background: -moz-linear-gradient( to top, white, lightblue);
+    background: -ms-linear-gradient( to top, white, lightblue);
+    background: -o-linear-gradient( to top, white, lightblue);
+    background: linear-gradient( to top, white, lightblue);
+  color: black;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#form {
+  border:solid;
+  display: inline-block;
+  padding:15px;
+}
+</style>
+  </head>
+  <body>
+    <center><h1><font size="14">Process Monitoring</font></h1></center>
+    <center><h4><i><font="Arial">Please use this window to interact with our service:<br>you can view information about all processes, or filter by process ID or process status.</font></i></h4></center>
+	<br><br>
+	<center>
+	<div id="form"><form>
+  <label>Specify a process ID (optional):</label>
+  <input type="number" id="processId" name="processId" min="1">
+  <input type="reset" value="Reset">
+</form>
+<br>
+<form>
+  <label>Specify a process status (optional):</label>
+  <select name="processStatus" id="processStatus">
+    <option value="NONE"></option>
+	<option value="COMPLETED">COMPLETED</option>
+    <option value="ERROR">COMPLETED WITH ERROR</option>
+    <option value="NOTSTARTED">NOT STARTED</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</center>
+<br>
+<br>
+<br>
+	<center><table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+	<th>Periodicity</th>
+	<th>Start Time</th>
+	<th>End Time</th>
+	<th>Status</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>First Process</td>
+    <td>This is the first process</td>
+	<td>WEEKLY</td>
+	<td>17/06/2020 15.55</td>
+	<td>17/06/2020 15.59</td>
+	<td>Completed</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Second Process</td>
+    <td>This is the second process</td>
+	<td>MONTHLY</td>
+	<td>14/06/2020 21.55</td>
+	<td>17/06/2020 15.59</td>
+	<td>Not Started</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Third Process</td>
+    <td>This is the third process</td>
+	<td>DAILY</td>
+	<td>15/06/2020 11.36</td>
+	<td>16/06/2020 12.05</td>
+	<td>Completed with error</td>
+  </tr>
+  </center>
+</table>
+<br>
+  </body>
+  <div class="footer">
+  <p><font="Arial"><font size="2">Process Monitoring is a service developed by <a href="mailto:info.federicorusso@gmail.com">Federico Russo</a> for Talent4Gig. All rights reserved © 2020.</font></font></p>
+</div>
+</html>
